@@ -29,6 +29,7 @@ label {
 }
 
 input {
+  outline:none;
   width: 50%;
   border: none;
   text-align: center;

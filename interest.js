@@ -1,11 +1,11 @@
-//const buton=document.getElementById('buton');
+
 const totalAmount = document.getElementById('total-amount');
 const princpleInput = document.getElementById('principal');
 const rateIn = document.getElementById('rate');
 const yearsIn = document.getElementById('time');
-///buton.addEventListener('click',()=>{
-function cal(a){
-    console.log(a)
+
+function cal(){
+   
     let principal = Number( princpleInput.value);
     let rate = Number(rateIn.value/100);
     let years = Number(yearsIn.value);
@@ -22,7 +22,8 @@ function cal(a){
         years = 0;
         yearsIn.value = 0;
     }
-    const result = principal* rate* years;
+
+    const result = principal+(principal* rate* years);
 
     totalAmount.textContent=result.toLocaleString("bn-BD", {
         style:"currency",
